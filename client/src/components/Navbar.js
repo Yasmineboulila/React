@@ -3,16 +3,11 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import React,{useState} from 'react'
-import Component4 from './component4'
-
+import React from 'react'
 
 
 function Component3({handleChange}) { 
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
@@ -26,7 +21,7 @@ function Component3({handleChange}) {
           >
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/movie">Movie List</Nav.Link>
-            <Nav.Link onClick={handleShow} >Add new movie</Nav.Link>
+            {/* <Nav.Link onClick={handleShow} >Add new movie</Nav.Link> */}
            
           </Nav>
           <Form className="d-flex">
@@ -41,7 +36,6 @@ function Component3({handleChange}) {
           </Form>
         </Navbar.Collapse>
       </Container>
-      <Component4 show={show}  handleClose={handleClose} />
     </Navbar>
   );
 }
